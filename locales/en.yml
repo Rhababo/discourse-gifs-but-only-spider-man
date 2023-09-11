@@ -1,6 +1,6 @@
 en:
   gif:
-    tag:"spider-man"
+    tag: "spider-man"
     modal_title: "Search GIFs"
     query: "Term"
     insert: "Insert Selected Images"
