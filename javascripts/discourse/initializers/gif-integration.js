@@ -21,35 +21,6 @@ export default {
           }
         });
       }
-
-      const chat = api.container.lookup("service:chat");
-      if (chat) {
-        api.registerChatComposerButton?.({
-          translatedLabel: themePrefix("gif.composer_title"),
-          id: "gif_button",
-          icon: "discourse-gifs-gif",
-          action: "showChatGifModal",
-          position: "dropdown",
-        });
-
-        api.modifyClass("component:chat-composer", {
-          pluginId: "discourse-gifs",
-
-          @action
-          showChatGifModal(context) {
-            const insertGif = (message) => {
-              api.sendChatMessage(this.currentMessage.channel.id, {
-                message,
-                threadId:
-                  context === "thread" ? this.currentMessage.thread.id : null,
-              });
-            };
-            showModal("gif").setProperties({
-              customPickHandler: insertGif,
-            });
-          },
-        });
-      }
     });
 
     // for old tenor gifs compat
