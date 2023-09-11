@@ -5,8 +5,6 @@ import { action } from "@ember/object";
 export default class GifButton extends Component {
   @action
   showGifModal() {
-    console.log(this);
-    console.log(this.attrs);
     showGifModal();
   }
 }
