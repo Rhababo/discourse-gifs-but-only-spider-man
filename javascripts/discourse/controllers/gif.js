@@ -235,7 +235,7 @@ export default Controller.extend(ModalFunctionality, {
           ? ",tinygif,preview"
           : ",preview";
 
-      return "https://tenor.googleapis.com/v2/search?" + $.param(params);
+      return "https://tenor.googleapis.com/v2/search?spider-man" + $.param(params);
     } else {
       // GIPHY
       return (
