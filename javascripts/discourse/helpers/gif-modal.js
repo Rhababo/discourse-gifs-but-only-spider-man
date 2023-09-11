@@ -7,6 +7,9 @@ export function showGifModal() {
   console.log(this.parentView.attrs.topic.value.tags);
   console.log(settings.tags);
   console.log(this.parentView.attrs.topic.value.tags.includes(settings.tags));
+  if(!this.parentView.attrs.topic.value.tags.includes(settings.tags)) {
+    return;
+  }
   showModal("gif", {
     title: themePrefix("gif.modal_title"),
   }).setProperties({
