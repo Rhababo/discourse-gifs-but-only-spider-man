@@ -1,3 +1,8 @@
+tags:
+  type: string
+  default:"spider-man"
+  description:
+    en: "tags must be present on the topic for the plugin to work"
 api_provider:
   default: "giphy"
   type: "enum"
