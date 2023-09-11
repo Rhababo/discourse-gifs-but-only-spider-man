@@ -1,6 +1,6 @@
 tags:
   type: string
-  default:"spider-man"
+  default: "spider-man"
 api_provider:
   default: "giphy"
   type: "enum"
