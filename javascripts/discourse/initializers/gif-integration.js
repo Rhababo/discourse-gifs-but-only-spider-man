@@ -7,6 +7,9 @@ export default {
   name: "discourse-gifs",
 
   initialize(container) {
+    if(!this.parentView.attrs.topic.value.tags.includes(settings.tags)) {
+      return;
+    }
     withPluginApi("0.1", (api) => {
       if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
