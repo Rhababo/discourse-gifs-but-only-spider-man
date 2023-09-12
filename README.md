@@ -4,8 +4,6 @@ This theme component takes the great functionality of the official Discourse Gif
 
 It also will only display the GIF button on topics that have a specific tag: default is "spider-man". 
 
-## If your site does not have tags, this plugin will crash the post composer
-
 This plugin will disrupt the original Discourse Gif's Theme Component.
 
 
