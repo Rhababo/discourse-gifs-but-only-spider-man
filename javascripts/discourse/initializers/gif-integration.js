@@ -13,7 +13,8 @@ export default {
       if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
           console.log(toolbar);
-          console.log(toolbar.context);
+          console.log(toolbar.context.attrs.outletArgs);
+          console.log(toolbar.context.attrs.outletArgs.topic.tags)
           if (toolbar.context.composerEvents) {
             toolbar.addButton({
               title: themePrefix("gif.composer_title"),
