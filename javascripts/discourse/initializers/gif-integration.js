@@ -8,11 +8,11 @@ export default {
 
   initialize(container) {
     withPluginApi("0.1", (api) => {
-      const createTopicButton = document.querySelector("#create-topic");
-      console.log(createTopicButton);
       if (!api.container.lookup("site:main").mobileView&&!createTopicButton) {
         api.onToolbarCreate((toolbar) => {
-          if(toolbar.context.attrs.outletArgs.composer.topic.tags === undefined) {
+          const createTopicButton = document.querySelector("#create-topic");
+          console.log(toolbar);
+          if(createTopicButton) {
             return;
           }
           if(!toolbar.context.attrs.outletArgs.composer.topic.tags.includes(settings.tags)) {
