@@ -8,6 +8,8 @@ export default {
 
   initialize(container) {
     withPluginApi("0.1", (api) => {
+      console.log(api.container);
+      console.log(api.container.lookup("site:main"));
       if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
           if(!toolbar.context.attrs.outletArgs.composer.topic.tags.includes(settings.tags)) {
