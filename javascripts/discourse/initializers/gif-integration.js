@@ -8,13 +8,11 @@ export default {
 
   initialize(container) {
     withPluginApi("0.1", (api) => {
-      console.log(api.container.lookup("site:main"));
-      console.log(api.container);
       if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
-          console.log(toolbar);
-          console.log(toolbar.context.attrs.outletArgs);
-          console.log(toolbar.context.attrs.outletArgs.composer.topic.tags);
+          if(!toolbar.context.attrs.outletArgs.composer.topic.tags.includes(settings.tags)) {
+            return;
+          }
           if (toolbar.context.composerEvents) {
             toolbar.addButton({
               title: themePrefix("gif.composer_title"),
