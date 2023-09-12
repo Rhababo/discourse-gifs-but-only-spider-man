@@ -14,11 +14,12 @@ export default {
           console.log(bodyTag);
           const bodyTagElement = document.querySelector(bodyTag);
           const createTopicButton = document.querySelector("#create-topic");
+          console.log(document.body.classList.contains(bodyTag));
           console.log(createTopicButton);
           if(createTopicButton) {
             return;
           }
-          if(!bodyTagElement) {
+          if(!document.body.classList.contains(bodyTag)) {
             return;
           }
           if (toolbar.context.composerEvents) {
