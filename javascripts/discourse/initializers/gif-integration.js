@@ -8,7 +8,7 @@ export default {
 
   initialize(container) {
     withPluginApi("0.1", (api) => {
-      if (!api.container.lookup("site:main").mobileView&&!createTopicButton) {
+      if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
           const createTopicButton = document.querySelector("#create-topic");
           console.log(toolbar);
