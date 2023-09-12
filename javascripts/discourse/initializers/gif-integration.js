@@ -11,8 +11,10 @@ export default {
       if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
           const bodyTag = "tag-"+settings.tags;
+          console.log(bodyTag);
           const bodyTagElement = document.querySelector(bodyTag);
           const createTopicButton = document.querySelector("#create-topic");
+          console.log(createTopicButton);
           if(createTopicButton) {
             return;
           }
