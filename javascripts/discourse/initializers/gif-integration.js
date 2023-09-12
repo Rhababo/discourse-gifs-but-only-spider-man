@@ -11,14 +11,6 @@ export default {
       if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
           const bodyTag = "tag-"+settings.tags;
-          console.log(bodyTag);
-          const bodyTagElement = document.querySelector(bodyTag);
-          const createTopicButton = document.querySelector("#create-topic");
-          console.log(document.body.classList.contains(bodyTag));
-          console.log(createTopicButton);
-          if(createTopicButton) {
-            return;
-          }
           if(!document.body.classList.contains(bodyTag)) {
             return;
           }
