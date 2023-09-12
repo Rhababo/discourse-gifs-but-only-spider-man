@@ -11,8 +11,7 @@ export default {
       const createTopicButton = document.querySelector("#create-topic");
       if (!api.container.lookup("site:main").mobileView&&!createTopicButton) {
         api.onToolbarCreate((toolbar) => {
-          const currentTags = toolbar.context.attrs.outletArgs.composer.topic.tags;
-          if(currentTags === undefined) {
+          if(toolbar.context.attrs.outletArgs.composer.topic.tags === undefined) {
             return;
           }
           if(!toolbar.context.attrs.outletArgs.composer.topic.tags.includes(settings.tags)) {
