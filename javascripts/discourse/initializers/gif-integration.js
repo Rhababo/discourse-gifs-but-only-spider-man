@@ -8,10 +8,10 @@ export default {
 
   initialize(container) {
     withPluginApi("0.1", (api) => {
-      console.log(api.container);
-      console.log(api.container.lookup("site:main"));
-      if (!api.container.lookup("site:main").mobileView) {
+      const createTopicButton = document.querySelector("#create-topic");
+      if (!api.container.lookup("site:main").mobileView&&!createTopicButton) {
         api.onToolbarCreate((toolbar) => {
+          console.log(toolbar);
           if(!toolbar.context.attrs.outletArgs.composer.topic.tags.includes(settings.tags)) {
             return;
           }
