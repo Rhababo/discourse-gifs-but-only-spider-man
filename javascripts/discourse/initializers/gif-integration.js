@@ -10,11 +10,13 @@ export default {
     withPluginApi("0.1", (api) => {
       if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
+          const bodyTag = "tag-"+settings.tags;
+          const bodyTagElement = document.querySelector(bodyTag);
           const createTopicButton = document.querySelector("#create-topic");
           if(createTopicButton) {
             return;
           }
-          if(!toolbar.context.attrs.outletArgs.composer.topic.tags.includes(settings.tags)) {
+          if(!bodyTagElement) {
             return;
           }
           if (toolbar.context.composerEvents) {
