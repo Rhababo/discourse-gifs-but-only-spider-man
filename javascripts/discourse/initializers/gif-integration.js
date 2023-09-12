@@ -14,7 +14,7 @@ export default {
         api.onToolbarCreate((toolbar) => {
           console.log(toolbar);
           console.log(toolbar.context.attrs.outletArgs);
-          console.log(toolbar.context.attrs.outletArgs.topic.tags)
+          console.log(toolbar.context.attrs.outletArgs.composer.topic.tags);
           if (toolbar.context.composerEvents) {
             toolbar.addButton({
               title: themePrefix("gif.composer_title"),
