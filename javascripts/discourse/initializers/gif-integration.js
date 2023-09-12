@@ -11,7 +11,6 @@ export default {
       if (!api.container.lookup("site:main").mobileView) {
         api.onToolbarCreate((toolbar) => {
           const createTopicButton = document.querySelector("#create-topic");
-          console.log(toolbar);
           if(createTopicButton) {
             return;
           }
